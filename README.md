@@ -1,16 +1,15 @@
 # UK VAT Calculator
 
-A simple tool to help businesses quickly calculate UK VAT (inclusive and exclusive). Designed for eCommerce sellers and businesses needing accurate VAT calculations for pricing and compliance.
+# Input price
+price = float(input("Enter price: £"))
+vat_rate = 20  # UK standard VAT
 
-## Features
-- Calculate VAT inclusive price
-- Calculate VAT exclusive price
-- Supports the UK standard VAT rate (20%)
+# Calculations
+vat_amount = price * vat_rate / 100
+total_price = price + vat_amount
+price_ex_vat = price / (1 + vat_rate/100)
 
-## Who this is for
-- eCommerce sellers
-- Online businesses
-- Accountants and VAT consultants
-
-## About
-This project was created to simplify VAT calculations for businesses dealing with UK tax compliance.
+# Output
+print(f"\nVAT amount: £{vat_amount:.2f}")
+print(f"Total price (incl. VAT): £{total_price:.2f}")
+print(f"Price excluding VAT: £{price_ex_vat:.2f}")
